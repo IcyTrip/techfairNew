@@ -15,37 +15,227 @@
             }
 
             section {
+                margin: 5vh 10vw;
                 display: grid;
-                grid-template-rows: 50vh 50vh;
-                grid-template-columns: 5vw 90vw 5vw;
+                grid-template-columns: 1fr 2vw 1fr;
+                border: 2px #000 solid;
+                border-radius: 10px;
+                min-height: 80vh;
             }
 
             form {
-                grid-row: auto;
-                grid-column: auto;
-                border: 2px #000 solid;
-                border-radius: 10px;
-                padding: 50px;
+                width: 100%;
+                max-width: 450px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 60px 40px;
+                grid-column: 3;
+                grid-row: 1;
+            }
+
+            form {
+                width: 100%;
+                max-width: 450px;
+                padding: 75px 40px 40px 40px;
+            }
+
+            .form-field,
+            form input,
+            #messageArea {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            form div {
+                margin-bottom: 15px;
             }
 
             #formHeader {
-                font-size: 36px;
+                font-size: 52px;
+                font-weight: 700;
+                margin-bottom: 45px;
+                color: #000;
+                letter-spacing: -1px;
             }
 
             .requiredSpan {
                 font-weight: 900;
-                font-size: 24px;
+                font-size: inherit;
                 color: #ff0000;
             }
 
+            .form-field {
+                position: relative;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            form input {
+                box-sizing: border-box;
+                width: 400px;
+                height: 40px;
+                padding: 8px 10px;
+                font-family: "Raleway", sans-serif;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            form input:focus {
+                outline: none;
+                border-color: #7d5d44;
+            }
+
+            strong {
+                font-weight: 900;
+            }
+
+            .form-field label {
+                position: absolute;
+                left: 10px;
+                top: 10px;
+                font-size: 16px;
+                color: #999;
+                pointer-events: none;
+                transition: all 0.3s ease;
+                background-color: white;
+                padding: 0 4px;
+                font-family: "Raleway", sans-serif;
+            }
+
+            .form-field input:focus + label,
+            .form-field input.has-value + label {
+                top: -12px;
+                font-size: 14px;
+                color: #7d5d44;
+            }
+
+            form input, #messageArea {
+                width: 100%;
+                height: 40px;
+                padding: 10px;
+                font-family: "Raleway", sans-serif;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
             #messageArea {
-                min-height: 50px;
-                min-width: 100px;
-                max-width: 100px;
+                min-height: 150px;
+                min-width: 100%;
+                max-width: 100%;
+            }
+
+            #messageArea:focus {
+                outline: none;
+                border-color: #7d5d44;
+            }
+
+            .form-field.textarea-field label {
+                position: absolute;
+                left: 10px;
+                top: 10px;
+                font-size: 16px;
+                color: #999;
+                pointer-events: none;
+                transition: all 0.3s ease;
+                background-color: white;
+                padding: 0 4px;
+            }
+
+            .form-field.textarea-field #messageArea:focus + label,
+            .form-field.textarea-field #messageArea.has-value + label {
+                top: -12px;
+                font-size: 14px;
+                color: #7d5d44;
+            }
+
+            #submitInput {
+                background-color: #7d5d44;
+                color: #fff;
+                border: none;
+                height: 45px;
+                font-size: 18px;
+                cursor: pointer;
+                border-radius: 4px;
+                transition: background-color 0.3s ease;
+            }
+
+            #submitInput:hover {
+                background-color: #5d4534;
+                cursor: pointer;
             }
 
             #honeypot {
                 display: none;
+            }
+
+            .contactInfo {
+                grid-column: 1;
+                padding: 60px 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                font-family: "Raleway", sans-serif;
+                line-height: 1.6;
+            }
+
+            .contactTitle {
+                font-size: 52px;
+                font-weight: 700;
+                margin-bottom: 25px;
+                letter-spacing: -1px;
+            }
+
+            .contactIntro {
+                font-size: 18px;
+                margin-bottom: 18px;
+                max-width: 520px;
+                color: #333;
+            }
+
+            .contactBlock {
+                margin-top: 30px;
+                padding-top: 18px;
+                border-top: 1px solid #e6e6e6;
+            }
+
+            .contactBlock h3 {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 10px;
+                color: #000;
+            }
+
+            .contactBlock p {
+                font-size: 17px;
+                margin-bottom: 6px;
+                color: #444;
+            }
+
+            .contactBlock a {
+                color: #7d5d44;
+                text-decoration: none;
+                font-weight: 500;
+                transition: color 0.2s ease;
+            }
+
+            .contactBlock a:hover {
+                color: #5d4534;
+                text-decoration: underline;
+            }
+
+            .socialLinks {
+                display: flex;
+                gap: 18px;
+                margin-top: 6px;
+            }
+
+            .socialLinks a {
+                padding: 4px 0;
+                font-size: 17px;
             }
         </style>
     </head>
@@ -63,36 +253,125 @@
                 </div>
             </div>
         </header>
-        <section>
-            <form action="contactresult.html" method="post">
-                <h2 id="formHeader">
-                    Contact Form
-                </h2>
-                <div>
-                    <label for="message">Full Name:</label><span class="requiredSpan">*</span>
-                    <input type="text" name="message" required>
+        <main>
+            <section>
+                <div class="contactInfo">
+                    <h2 class="contactTitle">Have a question?</h2>
+                    
+                    <p class="contactIntro">
+                        We're always happy to help. Whether you're looking for the perfect roast,
+                        have a question about an order, or want to learn more about our coffee,
+                        the Aurora team is here for you.
+                    </p>
+                    
+                    <p class="contactIntro">
+                        Send us a message using the form and we'll get back to you as soon as we can.
+                        Most replies arrive within <strong>24 hours, and during business hours</strong>.
+                        In the meantime, grab a cup of coffee and we'll be with you soon.
+                    </p>
+                    
+                    <div class="contactBlock">
+                        <h3>Contact</h3>
+                        <p>Email: <a href="mailto:hello@auroracoffee.com">hello@auroracoffee.com</a></p>
+                        <p>Phone: <a href="tel:18445640382">(844) 564-0382</a></p>
+                    </div>
+                    
+                    <div class="contactBlock">
+                        <h3>Business Hours</h3>
+                        <p>Monday – Friday: 9:00 AM – 5:00 PM</p>
+                        <p>Saturday: 10:00 AM – 4:00 PM</p>
+                        <p>Sunday: Closed</p>
+                    </div>
+                    
+                    <div class="contactBlock">
+                        <h3>Mailing Address</h3>
+                        <p>
+                            Aurora Coffee Roasters<br>
+                            742 Evergreen Terrace<br>
+                            Seattle, WA 98101<br>
+                            United States
+                        </p>
+                    </div>
+                    
+                    <div class="contactBlock">
+                        <h3>Follow Us</h3>
+                        <div class="socialLinks">
+                            <a href="#">Instagram</a>
+                            <a href="#">Facebook</a>
+                            <a href="#">Twitter / X</a>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <label for="message">eMail:</label><span class="requiredSpan">*</span>
-                    <input type="email" name="message" required>
+                <form action="contactresult.html" method="post">
+                    <h2 id="formHeader">
+                        Contact Form
+                    </h2>
+                    <div class="form-field">
+                        <input type="text" id="fullname" name="fullname" required>
+                        <label for="fullname">Full Name:<span class="requiredSpan">*</span></label>
+                    </div>
+                    <div class="form-field">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">eMail:<span class="requiredSpan">*</span></label>
+                    </div>
+                    <div class="form-field">
+                        <input type="text" id="phone" name="phone">
+                        <label for="phone">Phone #:</label>
+                    </div>
+                    <div class="form-field">
+                        <input type="text" id="address" name="address">
+                        <label for="address">Address:</label>
+                    </div>
+                    <div id="honeypot" class="form-field">
+                        <input type="text" id="ssn" name="ssn">
+                        <label for="ssn">Social Security Number:</label>
+                    </div>
+                    <div class="form-field textarea-field">
+                        <textarea name="message" id="messageArea" required></textarea>
+                        <label for="message">Message:<span class="requiredSpan">*</span></label>
+                    </div>
+                    <div class="form-field">
+                        <input type="submit" id="submitInput" value="Send Message">
+                    </div>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <p>&copy; Aurora Coffee Roasters, 2026. All rights reserved.</p>
+                <div class="footer-links">
+                    <a>Privacy Policy</a>
+                    <a>Terms of Service</a>
+                    <a href="contact.html">Contact Us</a>
                 </div>
-                <div>
-                    <label for="message">Phone #:</label>
-                    <input type="text" name="message">
-                </div>
-                <div>
-                    <label for="message">Address:</label>
-                    <input type="text" name="message">
-                </div>
-                <div id="honeypot">
-                    <label for="message">Social Security Number:</label><span class="requiredSpan">*</span>
-                    <input type="text" name="message">
-                </div>
-                <div>
-                    <label for="message">Message:</label><span class="requiredSpan">*</span>
-                    <textarea name="message" id="messageArea" required></textarea>
-                </div>
-            </form>
-        </section>
+            </div>
+        </footer>
     </body>
+    <script>
+        const formFields = document.querySelectorAll('.form-field input, .form-field textarea');
+        
+        formFields.forEach(field => {
+            if (field.value) {
+                field.classList.add('has-value');
+            }
+
+            field.addEventListener('input', function() {
+                if (this.value) {
+                    this.classList.add('has-value');
+                } else {
+                    this.classList.remove('has-value');
+                }
+            });
+
+            field.addEventListener('focus', function() {
+                this.classList.add('has-value');
+            });
+
+            field.addEventListener('blur', function() {
+                if (!this.value) {
+                    this.classList.remove('has-value');
+                }
+            });
+        });
+    </script>
 </html>
