@@ -34,16 +34,143 @@
         <a href="products.html" class="heroButton">Products</a>
     </div>
     <div class="productPreview">
-        <div>
-            <img>
+        <div class="imgDiv1">
+            <img src="images/coffee1.png" alt="Sunrise Blend" class="coffee1">
         </div>
-        <div>
-            
+        <div class="textDiv1">
+            <div style="padding:0 5rem 5.5rem 5rem;">
+                <h2 class="productPreviewHeading1">Sunrise Blend</h2>
+                <p class="productPreviewQuote">“Wake up to something wonderful.”</p>
+                <p class="productPreviewDesc">
+                    This lively light roast brings sunshine to your cup with bright citrus notes and a smooth honey finish. 
+                    Carefully sourced from high-elevation farms and roasted in small batches, Sunrise Blend is the perfect 
+                    companion for slow mornings and fresh starts.
+                </p>
+                <a href="products.html" class="productPreviewButton">View Product</a>
+            </div>
         </div>
+    </div>
+    <div class="newsletter">
+        <h2>Join the Aurora Coffee Club</h2>
+        <p>Sign up for exclusive roasts, brewing tips, and special discounts delivered straight to your inbox.</p>
+        <form>
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+        </form>
     </div>
 </body>
 
 <style>
+    .newsletter{
+        background-color:rgb(98, 67, 43);
+        padding:5rem;
+        color:rgb(255, 233, 213);
+        text-align:center;
+    }
+
+    .newsletter h2{
+        font-size:5rem;
+        font-weight:900;
+    }
+
+    .newsletter p{
+        font-size:1.5rem;
+        padding:1rem 20rem;
+        font-weight:200;
+    }
+
+    .newsletter form{
+        display:flex;
+        flex-direction:column;
+        width:30%;
+        margin:auto;
+        gap:1.2rem;
+    }
+
+    .newsletter form input{
+        padding:1rem 2rem;
+        border-radius:3px; 
+        border:none;
+        margin-top:1rem;
+        text-align:center;
+        font-size:1.2rem;
+    }
+
+    .newsletter form button{
+        transition:0.25s;
+        text-decoration:none;
+        padding:0.75rem 1.5rem;
+        background-color:black;
+        color:white;
+        border-radius:3px;
+        font-weight:600;
+        font-size:1.2rem;
+        border:none;
+        cursor:pointer;
+        width:75%;
+        margin:auto;
+    }
+
+    .newsletter form button:hover{
+        background-color:rgb(43, 43, 43);
+    }
+
+    .productPreviewButton{
+        transition:0.25s;
+        text-decoration:none;
+        transition:0.25s;
+        color:rgb(97, 68, 36);
+        font-weight:600;
+        padding:0.75rem 2rem;
+        background-color:rgb(255, 233, 213);
+        border-radius:50px;
+        border:solid rgb(247, 133, 92) 3px;
+        margin-bottom:5rem;
+    }
+
+    .productPreviewButton:hover{
+        background-color:rgb(247, 133, 92);
+    }
+
+    .productPreviewHeading1{
+        font-size:5rem;
+        font-weight:900;
+        color:rgb(247, 133, 92);
+    }
+
+    .productPreviewQuote{
+        color:rgb(126, 83, 68);
+        margin-bottom:1.5rem;
+    }
+
+    .productPreviewDesc{
+        color:black;
+        font-size:1.5rem;
+        font-weight:400;
+        padding-right:10rem;
+        margin-bottom:2.5rem;
+        line-height:2rem;
+    }
+
+    .productPreview{
+        display:flex;
+    }
+
+    .imgDiv1{
+        width:40%;
+    }
+
+    .textDiv1{
+        width:60%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .coffee1{
+        width:100%;
+    }
+
     .hero{
         overflow:hidden;
         height:70vh;
