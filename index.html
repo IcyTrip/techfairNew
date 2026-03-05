@@ -23,5 +23,74 @@
             </div>
         </div>
     </header>
+    <div class="hero">
+        <h1 class="mission">At Aurora Coffee Roasters, we believe great coffee starts with great care.</h1>
+        <p class="missionDesc">Every bean we roast is ethically sourced from farmers who share our commitment to sustainability, 
+            quality, and craftsmanship. Through small-batch roasting and thoughtful sourcing, we aim to bring 
+            exceptional coffee experiences to every cup. 
+            <br><br>
+            Because great mornings deserve great coffee.
+        </p>
+        <a href="products.html" class="heroButton">Products</a>
+    </div>
+    <div class="productPreview">
+        <div>
+            <img>
+        </div>
+        <div>
+            
+        </div>
+    </div>
 </body>
+
+<style>
+    .hero{
+        overflow:hidden;
+        height:70vh;
+        background-image:url(images/coffeehero.png);
+        background-color:rgba(0, 0, 0, 0.3);
+        background-blend-mode:darken;
+        background-size:100%;
+        background-repeat:no-repeat;
+        background-position-y:-190px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction:column;
+    }
+
+    .mission{
+        color:white;
+        font-weight:900;
+        font-size:4rem;
+        text-align:center;
+        margin-bottom:1rem;
+    }
+
+    .missionDesc{
+        color:white;
+        text-align:center;
+        margin-bottom:2rem;
+        padding:0 25rem;
+        font-weight:500;
+        line-height:1.2rem;
+        font-size:0.7rem;
+    }
+
+    .heroButton{
+        text-decoration:none;
+        transition:0.25s;
+        background-color:rgb(97, 68, 36);
+        font-weight:600;
+        padding:0.75rem 2rem;
+        color:rgb(255, 233, 213);
+        border-radius:50px;
+        border:solid rgb(255,233,213) 3px;
+    }
+
+    .heroButton:hover{
+        background-color:rgb(70, 49, 25);
+    }
+</style>
+
 </html>
