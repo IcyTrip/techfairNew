@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Aurora | Products</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,16 +24,124 @@
         </div>
     </header>
     <div class="productHeader">
-        <h2>Coffee Roasts</h2>
+        <h2>Roasts</h2>
+        <p>Every bean we roast is ethically sourced from farmers who share our commitment to sustainability, quality, and craftsmanship.</p>
+    </div>
+    <div class="productsContainer">
+        <hr>
+        <div class="products">
+            <div class="productCard">
+                <img src="images/coffee1.png" alt="Sunrise Blend" id="image1">
+                <div class="cardText">
+                    <h4>Sunrise Blend</h4>
+                    <small>Light Roast | Whole Bean or Ground</small>
+                    <p>$14.50</p>
+                </div>
+            </div>
+            <div class="productCard">
+                <img src="images/coffee2.png" alt="Midnight Roast" id="image2">
+                <div class="cardText">
+                    <h4>Midnight Roast</h4>
+                    <small>Dark Roast | Espresso-Friendly</small>
+                    <p>$15.25</p>
+                </div>
+            </div>
+            <div class="productCard">
+                <img src="images/coffee3.png" alt="Colombian Reserve" id="image3">
+                <div class="cardText">
+                    <h4>Colombian Reserve</h4>
+                    <small>Medium Roast | Single-Origin</small>
+                    <p>$15.00</p>
+                </div>
+            </div>
+            <div class="productCard">
+                <img src="images/coffee4.png" alt="Ethiopian Yirgacheffe" id="image4">
+                <div class="cardText">
+                    <h4>Ethiopian Yirgacheffe</h4>
+                    <small>Light Roast | Single-Origin</small>
+                    <p>$16.25</p>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <style>
+    #image1{
+        background-color:rgba(247, 133, 92, 0.2);
+    }
+
+    #image2{
+        background-color:rgba(45, 43, 83, 0.2);
+    }
+
+    #image3{
+        background-color:rgba(66, 108, 63, 0.2);
+    }
+
+    #image4{
+        background-color:rgba(141, 114, 180, 0.2);
+    }
+
+    .cardText{
+        margin-top:0.75rem;
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    .cardText h4{
+        font-size:1.2rem;
+        font-weight:800;
+        margin-bottom:0;
+    }
+
+    .cardText small{
+        font-size:.6rem;
+    }
+
+    .cardText p{
+        font-weight:700;
+        margin-top:1rem;
+    }
+
+    .productCard img{
+        width:100%;
+        object-fit:cover;
+        text-align:center;
+        height:200px;
+        padding:2rem 0;
+    }
+    
+    .productCard{
+        width:20%;
+        border-radius:2px;
+        cursor:pointer;
+    }
+    
+    .productCard:hover{
+        transition:0.1s;
+        border:solid 1px rgb(70, 70, 70);
+        transform:scale(1.02);
+    }
+
+    .products{
+        margin-top:2rem;
+        display:flex;
+        justify-content:space-between;
+    }
+
+    .productsContainer{
+        margin-top:2rem;
+        padding:0 10rem;
+    }
+
     .productHeader{
+        margin-top:3rem;
         text-align:center;
     }
 
     .productHeader h2{
-        
+        font-size:4rem;
+        font-weight:900;
+        margin-bottom:0.75rem;
     }
 </style>
 </html>
