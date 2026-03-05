@@ -42,12 +42,31 @@ table {
 	border-spacing: 0;
 }
 
-header{
-    width:100%;
-    height:5rem;
-    background-color:red;
+html{
+    font-family: "Raleway", sans-serif;
 }
 
-header img{
-    width:30%;
+header{
+    width:100%;
+    height:6rem;
+    background-color:rgb(255, 233, 213);
+    display:flex;
+    align-items:center;
+    padding:0 1rem;
+
+}
+
+.logoContainer{
+    display:flex;
+    align-items:center;
+    text-decoration:none;
+    color:black; 
+    font-size:2rem;
+    gap:1rem;
+    font-weight:bold;
+    color:rgb(97, 68, 36);
+}
+
+.logo{
+    height:5rem;
 }
