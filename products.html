@@ -41,14 +41,14 @@
                         </span>
                     </a>
                     <div id="filters" style="display: none; margin-left: 20px;">
-                        <select>
+                        <select class="filterSelect">
                             <option value="default" selected>Origin Type</option>
                             <option value="Whole Bean">Whole Bean</option>
                             <option value="Ground">Ground</option>
                             <option value="Espresso-Friendly">Espresso-Friendly</option>
                             <option value="Single-Origin">Single-Origin</option>
                         </select>
-                        <select>
+                        <select class="filterSelect">
                             <option value="default" selected>Roast Level</option>
                             <option value="Whole Bean">Light Roast</option>
                             <option value="Ground">Medium Roast</option>
@@ -209,6 +209,28 @@
             font-size:4rem;
             font-weight:900;
             margin-bottom:0.75rem;
+        }
+
+        #filters select {
+            padding: 0.5rem 1rem;
+            border: 1px solid #000;
+            background-color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #000;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            outline: none;
+            margin-left: 10px;
+        }
+
+        #filters select:hover {
+            border-color: #f7855c;
+        }
+
+        #filters select:focus {
+            border-color: #8d72b4;
+            box-shadow: 0 0 5px rgba(141, 114, 180, 0.5);
         }
     </style>
     <script>
