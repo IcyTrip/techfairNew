@@ -52,7 +52,7 @@ header{
     background-color:rgb(255, 233, 213);
     display:flex;
     align-items:center;
-    padding:0 1rem;
+    gap:10rem;
 
 }
 
@@ -65,8 +65,48 @@ header{
     gap:1rem;
     font-weight:bold;
     color:rgb(97, 68, 36);
+    width:40%;  
+    padding:0 1rem;
 }
 
 .logo{
     height:5rem;
+}
+
+.centeringDiv{
+    width:50%;
+}
+
+.navLinks{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    text-decoration:none;
+    padding:0 3rem 0 8rem;
+}
+
+.navLinks a{
+    text-decoration:none;
+    color:rgb(97, 68, 36);
+    font-size:1.2rem;
+    font-weight:500;
+    transition:0.25s;
+    padding:0.75em 1.5rem;
+}
+
+.contactButton{
+    background-color:rgb(97, 68, 36);
+    color:white !important;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+.contactButton:hover{
+    background-color:rgb(61, 43, 23);
+}
+
+.navLinks a:hover{
+    color:rgb(195, 159, 111);
 }
